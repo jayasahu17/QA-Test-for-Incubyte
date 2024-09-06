@@ -1,0 +1,106 @@
+Test Case 1: Verify UI Elements
+
+Steps:
+Open Gmail.
+Click on the "Compose" button to open a new message window.
+Check for the presence of the following elements:
+To: field
+Cc: and Bcc: options
+Subject: field
+Body text area
+Send button
+Save Draft button
+Attachments button
+Formatting options (example- bold, italic, underline)
+Discard button
+Verify that each element is correctly labeled and positioned.
+Expected Result: All required UI elements should be present and correctly labeled.
+
+Test Case 2: Validate Recipient Address Input
+Steps:
+Click on the "Compose" button.
+Enter a valid email address in the "To" field.
+Enter an invalid email address (Example-"invalidemail@.com") in the "To" field.
+Observe the behavior for both cases.
+Expected Result:
+Valid email address: Should be accepted without error.
+Invalid email address: Should show an error message indicating an invalid email format.
+
+Test Case 3: Subject Field Input
+Steps:
+Click on the "Compose" button.
+Enter text in the Subject field.
+Check for correct display of entered text.
+Enter text exceeding the character limit (if any) and observe the behavior.
+
+Expected Result: The Subject field should display entered text correctly.
+If a character limit is exceeded, an appropriate message should be displayed.
+
+Test Case 4: Email Body Formatting
+Steps:
+Click on the "Compose" button.
+Enter text in the body.
+Apply different formatting options (example- bold, italic, underline).
+Change text color and font style.
+Observe if the formatting is applied correctly.
+
+Expected Result: Formatting options should be applied as expected and displayed correctly in the email body.
+
+Test Case 5: Attach Files
+Steps:
+Click on the "Compose" button.
+Click on the "Attach files" button.
+Select one or more files to attach.
+Observe if the files are uploaded and displayed in the attachment area.
+Try to send the email with attachments.
+Expected Result:
+Files should be successfully attached and displayed.
+The email should be sent with attachments included.
+
+Test Case 6: Save as Draft
+Steps:
+Click on the "Compose" button.
+Enter information in the "To" field, Subject field, and Body.
+Click on the "Save Draft" button.
+Close the Compose window.
+Navigate to the Drafts folder.
+Open the saved draft and verify the content.
+
+Expected Result: The draft should be saved with all entered information and retrievable from the Drafts folder.
+
+Test Case 7: Discard Email
+Steps:
+Click on the "Compose" button.
+Enter information in the "To" field, Subject field, and Body.
+Click on the "Discard" button.
+Confirm the discard action if prompted.
+Verify that the email is not saved as a draft and is no longer accessible.
+
+Expected Result: The email should be discarded, and no draft should be saved.
+
+Test Case 8: Send Email
+Steps:
+Click on the "Compose" button.
+Enter valid information in the "To" field, Subject field, and Body.
+Click on the "Send" button.
+Check the Sent Items folder for the sent email.
+
+Expected Result: The email should be successfully sent and appear in the Sent Items folder.
+
+Test Case 9: Verify Email with No Recipient
+
+Steps:
+Click on the "Compose" button.
+Enter information in the Subject field and Body.
+Leave the "To" field empty.
+Click on the "Send" button.
+
+Expected Result: The system should display an error message indicating that the "To" field cannot be empty.
+
+Test Case 10: Verify Email with Empty Subject
+Steps:
+Click on the "Compose" button.
+Enter information in the "To" field and Body.
+Leave the Subject field empty.
+Click on the "Send" button.
+Expected Result: The system should allow sending an email with an empty subject or display a warning if required.
