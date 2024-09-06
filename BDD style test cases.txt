@@ -1,0 +1,128 @@
+Test Case 1: Verify UI Elements
+Scenario: User opens the Compose window and verifies UI elements
+
+Given the user is on the Gmail inbox page
+When the user clicks the "Compose" button
+Then the Compose window should open
+And the window should display the "To:" field
+And the window should display the "Cc:" and "Bcc:" options
+And the window should display the "Subject:" field
+And the window should display a body text area
+And the window should display a "Send" button
+And the window should display a "Save Draft" button
+And the window should display an "Attach files" button
+And the window should display formatting options (example- bold, italic, underline)
+And the window should display a "Discard" button
+Test Case 2: Validate Recipient Address Input
+Scenario: User enters a valid and an invalid email address in the "To" field
+
+Given the user is on the Compose window
+
+When the user enters a valid email address (example- "test@example.com") in the "To" field
+
+Then the email address should be accepted without any error
+
+When the user enters an invalid email address (example- "invalidemail@.com") in the "To" field
+
+Then the system should display an error message indicating the email format is invalid
+
+Test Case 3: Subject Field Input
+Scenario: User enters text in the Subject field and tests character limits
+
+Given the user is on the Compose window
+
+When the user enters text in the Subject field
+
+Then the entered text should be displayed correctly in the Subject field
+
+When the user enters text exceeding the character limit (if applicable) in the Subject field
+
+Then the system should display an appropriate message indicating the character limit has been exceeded
+
+Test Case 4: Email Body Formatting
+Scenario: User applies different formatting options to text in the email body
+
+Given the user is on the Compose window
+
+When the user enters text in the body
+
+And the user applies bold formatting to the text
+
+Then the text should be displayed in bold
+
+When the user applies italic formatting to the text
+
+Then the text should be displayed in italic
+
+When the user applies underline formatting to the text
+
+Then the text should be displayed with underline
+
+When the user changes the text color and font style
+
+Then the text should reflect the new color and font style
+
+Test Case 5: Attach Files
+Scenario: User attaches files to an email
+
+Given the user is on the Compose window
+
+When the user clicks on the "Attach files" button
+
+And the user selects one or more files to attach
+
+Then the selected files should be uploaded and displayed in the attachment area
+
+When the user sends the email
+
+Then the email should be sent with the attached files included
+
+Test Case 6: Save as Draft
+Scenario: User saves an email as a draft
+
+Given the user is on the Compose window
+
+When the user enters information in the "To" field, Subject field, and Body
+
+And the user clicks on the "Save Draft" button
+
+Then the email should be saved as a draft
+
+When the user navigates to the Drafts folder
+
+Then the saved draft should be visible and retrievable with all entered information
+
+Test Case 7: Discard Email
+Scenario: User discards an email without saving it
+
+Given the user is on the Compose window
+When the user enters information in the "To" field, Subject field, and Body
+And the user clicks on the "Discard" button
+Then the system should prompt for confirmation (if applicable)
+And the email should be discarded
+And no draft should be saved
+Test Case 8: Send Email
+Scenario: User sends an email successfully
+
+Given the user is on the Compose window
+When the user enters valid information in the "To" field, Subject field, and Body
+And the user clicks on the "Send" button
+Then the email should be successfully sent
+And the email should appear in the Sent Items folder
+Test Case 9: Verify Email with No Recipient
+Scenario: User attempts to send an email with no recipient
+
+Given the user is on the Compose window
+When the user enters information in the Subject field and Body
+And leaves the "To" field empty
+And the user clicks on the "Send" button
+Then the system should display an error message indicating that the "To" field cannot be empty
+Test Case 10: Verify Email with Empty Subject
+
+Scenario: User attempts to send an email with an empty subject
+
+Given the user is on the Compose window
+When the user enters information in the "To" field and Body
+And leaves the Subject field empty
+And the user clicks on the "Send" button
+Then the system should allow sending the email or display a warning message (if required)
